@@ -1,0 +1,52 @@
+{
+	"name": "PL_Append_V",
+	"properties": {
+		"activities": [
+			{
+				"name": "Append variable1",
+				"type": "AppendVariable",
+				"dependsOn": [
+					{
+						"activity": "Set variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Var2",
+					"value": {
+						"value": "@variables('Var1')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Var1",
+					"value": "Passed"
+				}
+			}
+		],
+		"variables": {
+			"Var1": {
+				"type": "String"
+			},
+			"Var2": {
+				"type": "Array"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2023-07-07T20:13:35Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
