@@ -35,22 +35,6 @@
 					"variableName": "Var1",
 					"value": "Passed"
 				}
-			},
-			{
-				"name": "Wait1",
-				"type": "Wait",
-				"dependsOn": [
-					{
-						"activity": "Append variable1",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"userProperties": [],
-				"typeProperties": {
-					"waitTimeInSeconds": 5
-				}
 			}
 		],
 		"variables": {
