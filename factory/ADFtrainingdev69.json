@@ -1,5 +1,13 @@
 {
 	"name": "ADFtrainingdev69",
+	"properties": {
+		"globalParameters": {
+			"ContainerName": {
+				"type": "string",
+				"value": "Test"
+			}
+		}
+	},
 	"location": "eastus",
 	"identity": {
 		"type": "SystemAssigned",
